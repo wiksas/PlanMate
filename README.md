@@ -1,2 +1,7 @@
 # Projekt_WS_BR
-Zadania projektowe Wiktora Sasnala oraz Bartłomieja Rojka
+📚 Zadania Projektowe - To-Do list grafik
+
+📝 Autorzy
+
+- **Wiktor Sasnal**
+- **Bartłomiej Rojek**
