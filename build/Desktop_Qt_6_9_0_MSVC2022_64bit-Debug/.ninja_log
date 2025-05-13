@@ -1,0 +1,10 @@
+# ninja log v5
+6	75	0	C:/Users/wikto/Desktop/applicationTODO/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/CMakeFiles/cmake.verify_globs	3736bff2820192ce
+77	439	7688438282418572	applicationTODO_autogen/timestamp	d872791f85c34303
+77	439	7688438282418572	applicationTODO_autogen/mocs_compilation.cpp	d872791f85c34303
+77	439	7688438282418572	C:/Users/wikto/Desktop/applicationTODO/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/applicationTODO_autogen/timestamp	d872791f85c34303
+77	439	7688438282418572	C:/Users/wikto/Desktop/applicationTODO/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/applicationTODO_autogen/mocs_compilation.cpp	d872791f85c34303
+453	1967	7688438298203863	CMakeFiles/applicationTODO.dir/todo.cpp.obj	55d44a12c3cbea35
+442	2544	7688438303987094	CMakeFiles/applicationTODO.dir/applicationTODO_autogen/mocs_compilation.cpp.obj	fbdb1f5bde2fb2b2
+448	3104	7688438309561902	CMakeFiles/applicationTODO.dir/main.cpp.obj	a6d96f8c507e3cf2
+3182	7612	7688438348633495	applicationTODO.exe	e70663a5585bf92d
