@@ -16,4 +16,4 @@
 - ❌ Zapis i odczyt z pliku
 
 
-dziala
+dziala pre
