@@ -14,3 +14,6 @@
 - ❌ Oznaczanie zadań jako wykonane
 - ❌ Filtrowanie zadań
 - ❌ Zapis i odczyt z pliku
+
+
+dziala
