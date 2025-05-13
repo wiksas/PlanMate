@@ -15,5 +15,4 @@
 - ❌ Filtrowanie zadań
 - ❌ Zapis i odczyt z pliku
 
-
-dziala pre
+pre-main test
