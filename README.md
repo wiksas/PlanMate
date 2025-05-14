@@ -1,5 +1,5 @@
 # Projekt_WS_BR
-📚 Zadania Projektowe - To-Do list grafik
+📚 Zadania Projektowe - PlanMate
 
 ## 📝 Autorzy
 
@@ -14,6 +14,3 @@
 - ❌ Oznaczanie zadań jako wykonane
 - ❌ Filtrowanie zadań
 - ❌ Zapis i odczyt z pliku
-
-
-dziala pre
