@@ -14,43 +14,40 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>180</y>
-      <width>49</width>
-      <height>16</height>
+      <x>30</x>
+      <y>40</y>
+      <width>541</width>
+      <height>371</height>
      </rect>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="addButton">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>220</y>
-      <width>80</width>
-      <height>24</height>
+      <x>80</x>
+      <y>460</y>
+      <width>83</width>
+      <height>29</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Dodaj</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton">
+   <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>270</y>
-      <width>91</width>
-      <height>22</height>
+      <x>380</x>
+      <y>460</y>
+      <width>83</width>
+      <height>29</height>
      </rect>
     </property>
     <property name="text">
-     <string>RadioButton</string>
+     <string>Usun</string>
     </property>
    </widget>
   </widget>
@@ -60,7 +57,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
