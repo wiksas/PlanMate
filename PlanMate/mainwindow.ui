@@ -150,7 +150,7 @@
      <property name="geometry">
       <rect>
        <x>60</x>
-       <y>70</y>
+       <y>80</y>
        <width>141</width>
        <height>31</height>
       </rect>
@@ -311,6 +311,175 @@
      </property>
      <property name="text">
       <string>Edycja</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nazwa:</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="NazwaEdycja">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>30</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDateTimeEdit" name="DataEdycja">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>70</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Data:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Priorytet:</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="Prio1Edycja">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>140</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Priorytet Niski</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="Prio2Edycja">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>160</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Priorytet Średni</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="Prio3Edycja">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>180</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Priorytet Wysoki</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_21">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>210</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Status:</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="DoZrobieniaEdycja">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>230</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>do zrobienia</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="WTrakcieEdycja">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>250</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>w trakcie</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ZrobioneEdycja">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>270</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>zrobione</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="DodajEdycja">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>300</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Edytuj</string>
      </property>
     </widget>
    </widget>
