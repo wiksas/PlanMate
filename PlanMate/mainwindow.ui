@@ -17,16 +17,36 @@
    <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
+<<<<<<< HEAD
       <x>30</x>
       <y>40</y>
       <width>541</width>
       <height>371</height>
      </rect>
     </property>
+=======
+      <x>260</x>
+      <y>0</y>
+      <width>291</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>48</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>PlanMate</string>
+    </property>
+>>>>>>> 84d74ef1e8858b5ecf90731b178a42fb0275b64a
    </widget>
    <widget class="QPushButton" name="addButton">
     <property name="geometry">
      <rect>
+<<<<<<< HEAD
       <x>80</x>
       <y>460</y>
       <width>83</width>
@@ -44,10 +64,554 @@
       <y>460</y>
       <width>83</width>
       <height>29</height>
+=======
+      <x>680</x>
+      <y>520</y>
+      <width>81</width>
+      <height>24</height>
      </rect>
     </property>
     <property name="text">
+     <string>zapisz zadania</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>520</y>
+      <width>101</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>wczytaj zadania</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>490</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>obsługa plików:</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="Dodawanie">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>241</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="Dodaj">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>300</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Dodaj</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="Prio3">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>180</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Priorytet Wysoki</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="Prio2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>160</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Priorytet Średni</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="Prio1">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>140</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Priorytet Niski</string>
+     </property>
+    </widget>
+    <widget class="QDateTimeEdit" name="Data">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>80</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>0</y>
+       <width>151</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Dodawanie zadania</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>50</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nazwa:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Data:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>110</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Priorytet:</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="Nazwa">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>210</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Status:</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="DoZrobienia">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>230</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>do zrobienia</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="WTrakcie">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>250</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>w trakcie</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="Zrobione">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>270</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>zrobione</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="Edycja">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>80</y>
+      <width>241</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>0</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Edycja</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nazwa:</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="NazwaEdycja">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>30</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDateTimeEdit" name="DataEdycja">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>70</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Data:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Priorytet:</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="Prio1Edycja">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>140</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Priorytet Niski</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="Prio2Edycja">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>160</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Priorytet Średni</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="Prio3Edycja">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>180</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Priorytet Wysoki</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_21">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>210</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Status:</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="DoZrobieniaEdycja">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>230</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>do zrobienia</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="WTrakcieEdycja">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>250</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>w trakcie</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ZrobioneEdycja">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>270</y>
+       <width>158</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>zrobione</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="DodajEdycja">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>300</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Edytuj</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="Wyswietlanie">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>80</y>
+      <width>281</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>0</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Zadania</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>470</y>
+      <width>141</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Wykonali:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>500</y>
+      <width>141</width>
+      <height>20</height>
+>>>>>>> 84d74ef1e8858b5ecf90731b178a42fb0275b64a
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe Script</family>
+      <pointsize>12</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Wiktor Sasnal</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>520</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe Script</family>
+      <pointsize>12</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+<<<<<<< HEAD
      <string>Usun</string>
+=======
+     <string>Bartłomiej Rojek</string>
+>>>>>>> 84d74ef1e8858b5ecf90731b178a42fb0275b64a
     </property>
    </widget>
   </widget>
