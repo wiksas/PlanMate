@@ -27,11 +27,19 @@ qt_add_executable(PlanMate
     ${PROJECT_SOURCES}
 )
 
-
-target_link_libraries(PlanMate PRIVATE
-    Qt${QT_VERSION_MAJOR}::Widgets
-    BusinessLogic
+target_link_libraries(PlanMate
+    PRIVATE
+        Qt${QT_VERSION_MAJOR}::Widgets
+        BusinessLogic
 )
+target_link_libraries(BusinessLogic
+    PRIVATE
+        Qt${QT_VERSION_MAJOR}::Core
+        Qt${QT_VERSION_MAJOR}::Gui
+)
+
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Gui)
+
 
 
 target_include_directories(PlanMate PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
