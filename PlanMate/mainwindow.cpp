@@ -276,6 +276,3 @@ void MainWindow::odswiezModele()
     modelZrobione->setTasks(manager->getTasks(), "zrobione");
 
 }
-
-
-
