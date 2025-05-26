@@ -9,7 +9,6 @@ class BUSINESSLOGIC_EXPORT Task {
 public:
     Task(const QString& title = "", const QString& description = "", const QString& status = "", const QDateTime& deadline = QDateTime::currentDateTime(), const QString& priority = "");
 
-    //gettery
     QString getTitle() const;
     QString getDescription() const;
     QString getStatus() const;
@@ -18,7 +17,6 @@ public:
     bool isCompleted() const;
     QDateTime getCreatedAt() const;
 
-    //settery
     void setTitle(const QString& title);
     void setDescription(const QString& description);
     void setStatus(const QString& status);

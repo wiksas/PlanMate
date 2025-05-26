@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>812</width>
+    <width>1079</width>
     <height>604</height>
    </rect>
   </property>
@@ -37,7 +37,7 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>680</x>
+      <x>950</x>
       <y>520</y>
       <width>81</width>
       <height>24</height>
@@ -50,7 +50,7 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>570</x>
+      <x>830</x>
       <y>520</y>
       <width>101</width>
       <height>24</height>
@@ -63,7 +63,7 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>570</x>
+      <x>830</x>
       <y>490</y>
       <width>111</width>
       <height>20</height>
@@ -200,7 +200,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>200</y>
+       <y>190</y>
        <width>221</width>
        <height>81</height>
       </rect>
@@ -310,7 +310,7 @@
    <widget class="QFrame" name="Edycja">
     <property name="geometry">
      <rect>
-      <x>550</x>
+      <x>830</x>
       <y>80</y>
       <width>241</width>
       <height>401</height>
@@ -507,7 +507,7 @@
        <x>10</x>
        <y>270</y>
        <width>211</width>
-       <height>81</height>
+       <height>61</height>
       </rect>
      </property>
      <property name="title">
@@ -539,19 +539,19 @@
        <string>w trakcie</string>
       </property>
      </widget>
-     <widget class="QRadioButton" name="ZrobioneEdycja">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>60</y>
-        <width>158</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>zrobione</string>
-      </property>
-     </widget>
+    </widget>
+    <widget class="QCheckBox" name="checkBoxWykonane">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>340</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Oznacz jako wykonane</string>
+     </property>
     </widget>
    </widget>
    <widget class="QFrame" name="Wyswietlanie">
@@ -559,7 +559,7 @@
      <rect>
       <x>260</x>
       <y>80</y>
-      <width>281</width>
+      <width>561</width>
       <height>471</height>
      </rect>
     </property>
@@ -569,35 +569,48 @@
     <property name="frameShadow">
      <enum>QFrame::Shadow::Raised</enum>
     </property>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>100</x>
-       <y>0</y>
-       <width>81</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-       <italic>true</italic>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Zadania</string>
-     </property>
-    </widget>
-    <widget class="QTableView" name="tableView">
+    <widget class="QTabWidget" name="tabWidgetZadania">
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>30</y>
-       <width>281</width>
-       <height>421</height>
+       <y>0</y>
+       <width>561</width>
+       <height>471</height>
       </rect>
      </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="doZrobienia">
+      <attribute name="title">
+       <string>Zadania do zrobienia</string>
+      </attribute>
+      <widget class="QTableView" name="tableViewDoZrobienia">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>561</width>
+         <height>421</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="zrobione">
+      <attribute name="title">
+       <string>Zadania zakończone</string>
+      </attribute>
+      <widget class="QTableView" name="tableViewZrobione">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>561</width>
+         <height>441</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
     </widget>
    </widget>
    <widget class="QLabel" name="label_10">
@@ -668,8 +681,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>812</width>
-     <height>25</height>
+     <width>1079</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

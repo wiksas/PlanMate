@@ -26,15 +26,20 @@ private slots:
 
     void on_DodajEdycja_clicked();
 
-    void on_tableRow_clicked(const QModelIndex &index);
+    void on_tableRow_clickedDoZrobienia(const QModelIndex &index);
+    void on_tableRow_clickedZrobione(const QModelIndex &index);
 
 
     void on_UsunEdycja_clicked();
 
+    void odswiezModele();
+
 private:
     Ui::MainWindow *ui;
     TaskManager* manager;
-    TaskModel* model;
+    TaskModel* modelDoZrobienia;
+    TaskModel* modelZrobione;
+
     void wyczyscPolaDodawania();
 };
 #endif // MAINWINDOW_H
