@@ -49,7 +49,7 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_Dodaj_clicked() //Dodaje zadanie do tabeli z wprowadzonymi danymi
+void MainWindow::on_Dodaj_clicked()
 {
     QString nazwa = ui->Nazwa->toPlainText();
     QString opis = ui->Opis->toPlainText();
@@ -78,13 +78,13 @@ void MainWindow::on_Dodaj_clicked() //Dodaje zadanie do tabeli z wprowadzonymi d
     wyczyscPolaDodawania();
 }
 
-void MainWindow::on_tableRow_clickedDoZrobienia(const QModelIndex &index) //Pobiera indeks zadania klikniętego w tabeli 'do zrobienia' i wstawia dane do pola edycji
-{
+void MainWindow::on_tableRow_clickedDoZrobienia(const QModelIndex &index){
     int row = index.row();
     if (row < 0 || row >= modelDoZrobienia->rowCount()) return;
 
-    // Pobiera oryginalny indeks z managera
+
     int originalIndex = modelDoZrobienia->getOriginalIndex(row);
+
     if (originalIndex < 0 || originalIndex >= manager->taskCount()) return;
 
     Task& task = manager->getTask(originalIndex);
@@ -93,12 +93,11 @@ void MainWindow::on_tableRow_clickedDoZrobienia(const QModelIndex &index) //Pobi
     ui->OpisEdycja->setPlainText(task.getDescription());
     ui->DataEdycja->setDateTime(task.getDeadline());
 
-    // Ustaw priorytet
+
+
     if (task.getPriority() == "Niski") ui->Prio1Edycja->setChecked(true);
     else if (task.getPriority() == "Średni") ui->Prio2Edycja->setChecked(true);
     else if (task.getPriority() == "Wysoki") ui->Prio3Edycja->setChecked(true);
-
-    // Ustaw status
     if (task.getStatus() == "do zrobienia") ui->DoZrobieniaEdycja->setChecked(true);
     else if (task.getStatus() == "w trakcie") ui->WTrakcieEdycja->setChecked(true);
     else if (task.getStatus() == "zrobione") ui->checkBoxWykonane->setChecked(true);
@@ -106,12 +105,11 @@ void MainWindow::on_tableRow_clickedDoZrobienia(const QModelIndex &index) //Pobi
     ui->tableViewDoZrobienia->selectRow(row);
 }
 
-void MainWindow::on_tableRow_clickedZrobione(const QModelIndex &index) //Pobiera indeks zadania klikniętego w tabeli 'zakonczone' i wstawia dane do pola edycji
-{
+void MainWindow::on_tableRow_clickedZrobione(const QModelIndex &index){
+
     int row = index.row();
     if (row < 0 || row >= modelZrobione->rowCount()) return;
 
-    // Pobierz oryginalny indeks z managera
     int originalIndex = modelZrobione->getOriginalIndex(row);
     if (originalIndex < 0 || originalIndex >= manager->taskCount()) return;
 
@@ -121,34 +119,31 @@ void MainWindow::on_tableRow_clickedZrobione(const QModelIndex &index) //Pobiera
     ui->OpisEdycja->setPlainText(task.getDescription());
     ui->DataEdycja->setDateTime(task.getDeadline());
 
-    // Ustaw priorytet
+
+
+
     if (task.getPriority() == "Niski") ui->Prio1Edycja->setChecked(true);
     else if (task.getPriority() == "Średni") ui->Prio2Edycja->setChecked(true);
     else if (task.getPriority() == "Wysoki") ui->Prio3Edycja->setChecked(true);
 
-    // Dla zakończonych zadań
     ui->checkBoxWykonane->setChecked(true);
-
     ui->tableViewZrobione->selectRow(row);
 }
 
 
 
-void MainWindow::on_DodajEdycja_clicked() // obsluga pola edycji
-{
+void MainWindow::on_DodajEdycja_clicked(){
     QModelIndex index;
     int originalIndex = -1;
 
-    // Sprawdza ktora zakładka jest aktywna i pobierz oryginalny indeks
-    if (ui->tabWidgetZadania->currentIndex() == 0) // Do zrobienia
-    {
+
+    if (ui->tabWidgetZadania->currentIndex() == 0){ // Do zrobienia
         index = ui->tableViewDoZrobienia->currentIndex();
         if (index.isValid()) {
             originalIndex = modelDoZrobienia->getOriginalIndex(index.row());
         }
     }
-    else if (ui->tabWidgetZadania->currentIndex() == 1) // Zrobione
-    {
+    else if (ui->tabWidgetZadania->currentIndex() == 1){ // Zrobione
         index = ui->tableViewZrobione->currentIndex();
         if (index.isValid()) {
             originalIndex = modelZrobione->getOriginalIndex(index.row());
@@ -163,6 +158,7 @@ void MainWindow::on_DodajEdycja_clicked() // obsluga pola edycji
     QString nazwa = ui->NazwaEdycja->toPlainText();
     QString opis = ui->OpisEdycja->toPlainText();
     QDateTime data = ui->DataEdycja->dateTime();
+
 
     QString priorytet_edycja;
     if (ui->Prio1Edycja->isChecked()) priorytet_edycja = "Niski";
@@ -180,7 +176,6 @@ void MainWindow::on_DodajEdycja_clicked() // obsluga pola edycji
     task.setDeadline(data);
     task.setPriority(priorytet_edycja);
 
-    // Ustawienie statusu na podstawie checkboxa
     if (ui->checkBoxWykonane->isChecked()) {
         task.setStatus("zrobione");
     } else if (ui->DoZrobieniaEdycja->isChecked()) {
@@ -189,7 +184,6 @@ void MainWindow::on_DodajEdycja_clicked() // obsluga pola edycji
         task.setStatus("w trakcie");
     }
 
-    // Uaktualnij modele i widok
     odswiezModele();
 
     QMessageBox::information(this, "Edycja", "Zadanie zostało zaktualizowane.");
@@ -214,25 +208,18 @@ void MainWindow::wyczyscPolaDodawania()
     ui->DoZrobienia->setChecked(true);
 }
 
-
-
-
-
 void MainWindow::on_UsunEdycja_clicked()
 {
     QModelIndex index;
     int originalIndex = -1;
 
-    // Sprawdź która zakładka jest aktywna i pobierz oryginalny indeks
-    if (ui->tabWidgetZadania->currentIndex() == 0) // Do zrobienia
-    {
+    if (ui->tabWidgetZadania->currentIndex() == 0){ // Do zrobienia
         index = ui->tableViewDoZrobienia->currentIndex();
         if (index.isValid()) {
             originalIndex = modelDoZrobienia->getOriginalIndex(index.row());
         }
     }
-    else if (ui->tabWidgetZadania->currentIndex() == 1) // Zrobione
-    {
+    else if (ui->tabWidgetZadania->currentIndex() == 1){ // Zrobione
         index = ui->tableViewZrobione->currentIndex();
         if (index.isValid()) {
             originalIndex = modelZrobione->getOriginalIndex(index.row());
@@ -248,7 +235,7 @@ void MainWindow::on_UsunEdycja_clicked()
         manager->removeTask(originalIndex);
         odswiezModele();
 
-        // Wyczyść pola edycji
+
         ui->NazwaEdycja->clear();
         ui->OpisEdycja->clear();
         ui->DataEdycja->setDateTime(QDateTime::currentDateTime());
@@ -257,7 +244,6 @@ void MainWindow::on_UsunEdycja_clicked()
         ui->checkBoxWykonane->setChecked(false);
     }
 }
-
 
 void MainWindow::odswiezModele()
 {

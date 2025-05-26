@@ -23,15 +23,12 @@ public:
 private slots:
 
     void on_Dodaj_clicked();
-
     void on_DodajEdycja_clicked();
 
     void on_tableRow_clickedDoZrobienia(const QModelIndex &index);
     void on_tableRow_clickedZrobione(const QModelIndex &index);
 
-
     void on_UsunEdycja_clicked();
-
     void odswiezModele();
 
 private:
