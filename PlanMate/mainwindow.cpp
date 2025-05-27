@@ -20,21 +20,25 @@ MainWindow::MainWindow(QWidget *parent)
     modelDoZrobienia = new TaskModel(manager, this);
     modelZrobione = new TaskModel(manager, this);
 
-    // Ustawia modele dla widoków tabel
+
     ui->tableViewDoZrobienia->setModel(modelDoZrobienia);
     ui->tableViewZrobione->setModel(modelZrobione);
 
-    // Ustawia własciwości tabel
+
     ui->tableViewDoZrobienia->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableViewDoZrobienia->setSelectionMode(QAbstractItemView::SingleSelection);
     ui->tableViewZrobione->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableViewZrobione->setSelectionMode(QAbstractItemView::SingleSelection);
 
-    connect(ui->tableViewDoZrobienia, &QTableView::clicked,
-            this, &MainWindow::on_tableRow_clickedDoZrobienia);
+
 
     connect(ui->tableViewZrobione, &QTableView::clicked,
             this, &MainWindow::on_tableRow_clickedZrobione);
+
+    connect(ui->tableViewDoZrobienia, &QTableView::clicked,
+            this, &MainWindow::on_tableRow_clickedDoZrobienia);
+
+
 
     ui->Data->setDateTime(QDateTime::currentDateTime());
     ui->DataEdycja->setDateTime(QDateTime::currentDateTime());
@@ -42,6 +46,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->DoZrobienia->setChecked(true);
     ui->Prio1Edycja->setChecked(true);
     ui->DoZrobieniaEdycja->setChecked(true);
+
 
     manager->loadTasksFromFile(dataFilePath);
     odswiezModele();
@@ -272,6 +277,8 @@ void MainWindow::odswiezModele()
 }
 
 
+
+
 void MainWindow::on_wczytaj_clicked()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
@@ -287,6 +294,9 @@ void MainWindow::on_wczytaj_clicked()
         }
     }
 }
+
+
+
 
 void MainWindow::on_zapisz_clicked()
 {
