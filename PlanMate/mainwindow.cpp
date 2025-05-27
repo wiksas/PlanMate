@@ -4,8 +4,11 @@
 #include "BusinessLogic/taskmanager.h"
 #include "BusinessLogic/taskmodel.h"
 #include <QMessageBox>
-
-
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QFile>
+#include <QFileDialog>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -40,11 +43,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->Prio1Edycja->setChecked(true);
     ui->DoZrobieniaEdycja->setChecked(true);
 
+    manager->loadTasksFromFile(dataFilePath);
     odswiezModele();
 }
 
 MainWindow::~MainWindow()
 {
+    manager->saveTasksToFile(dataFilePath);
     delete ui;
 }
 
@@ -242,6 +247,9 @@ void MainWindow::on_UsunEdycja_clicked()
         ui->Prio1Edycja->setChecked(true);
         ui->DoZrobieniaEdycja->setChecked(true);
         ui->checkBoxWykonane->setChecked(false);
+
+
+
     }
 }
 
@@ -262,3 +270,39 @@ void MainWindow::odswiezModele()
     modelZrobione->setTasks(manager->getTasks(), "zrobione");
 
 }
+
+
+void MainWindow::on_wczytaj_clicked()
+{
+    QString fileName = QFileDialog::getOpenFileName(this,
+                                                    tr("Wczytaj zadania"),
+                                                    "",
+                                                    tr("(*.json);;Wszystkie pliki (*)"));
+    if (!fileName.isEmpty()) {
+        if (manager->loadTasksFromFile(fileName)) {
+            odswiezModele();
+            QMessageBox::information(this, "Wczytano", "Zadania zostały wczytane pomyślnie.");
+        } else {
+            QMessageBox::warning(this, "Błąd", "Nie udało się wczytać zadań.");
+        }
+    }
+}
+
+void MainWindow::on_zapisz_clicked()
+{
+
+    QString fileName = QFileDialog::getSaveFileName(this,
+                                                    tr("Zapisz zadania"),
+                                                    "",
+                                                    tr("(*.json);;Wszystkie pliki (*)"));
+    if (!fileName.isEmpty()) {
+        if (manager->saveTasksToFile(fileName)) {
+            QMessageBox::information(this, "Zapisano", "zapisano pomyślnie.");
+        } else {
+            QMessageBox::warning(this, "Błąd", "Nie udało się zapisać");
+        }
+    }
+}
+
+
+
