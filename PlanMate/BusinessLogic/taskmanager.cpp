@@ -35,11 +35,11 @@ bool TaskManager::saveTasksToFile(const QString& filePath)
     QJsonArray taskArray;
     for (const Task& task : m_tasks) {
         QJsonObject taskObject;
-        taskObject["title"] = task.getTitle();
-        taskObject["description"] = task.getDescription();
+        taskObject["tytul"] = task.getTitle();
+        taskObject["opis"] = task.getDescription();
         taskObject["status"] = task.getStatus();
         taskObject["deadline"] = task.getDeadline().toString(Qt::ISODate);
-        taskObject["priority"] = task.getPriority();
+        taskObject["priorytet"] = task.getPriority();
         taskArray.append(taskObject);
     }
 
@@ -68,7 +68,7 @@ bool TaskManager::loadTasksFromFile(const QString& filePath)
 
     QJsonDocument doc = QJsonDocument::fromJson(jsonData);
     if (!doc.isArray()) {
-        qWarning() << "Nieprawidłowy format JSON: nie jest tablicą.";
+        qWarning() << "Nieprawidłowy format JSON";
         return false;
     }
 
@@ -77,13 +77,13 @@ bool TaskManager::loadTasksFromFile(const QString& filePath)
     for (const QJsonValue& value : taskArray) {
         if (value.isObject()) {
             QJsonObject taskObject = value.toObject();
-            QString title = taskObject["title"].toString();
-            QString description = taskObject["description"].toString();
+            QString tytul = taskObject["tytul"].toString();
+            QString opis = taskObject["opis"].toString();
             QString status = taskObject["status"].toString();
             QDateTime deadline = QDateTime::fromString(taskObject["deadline"].toString(), Qt::ISODate);
-            QString priority = taskObject["priority"].toString();
+            QString priorytet = taskObject["priorytet"].toString();
 
-            m_tasks.append(Task(title, description, status, deadline, priority));
+            m_tasks.append(Task(tytul, opis, status, deadline, priorytet));
         }
     }
     return true;
