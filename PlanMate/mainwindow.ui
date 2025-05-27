@@ -17,8 +17,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>0</y>
+      <x>410</x>
+      <y>10</y>
       <width>291</width>
       <height>71</height>
      </rect>
@@ -34,52 +34,13 @@
      <string>PlanMate</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>950</x>
-      <y>520</y>
-      <width>81</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>zapisz zadania</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>830</x>
-      <y>520</y>
-      <width>101</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>wczytaj zadania</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>830</x>
-      <y>490</y>
-      <width>111</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>obsługa plików:</string>
-    </property>
-   </widget>
    <widget class="QFrame" name="Dodawanie">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>241</width>
-      <height>401</height>
+      <x>11</x>
+      <y>81</y>
+      <width>251</width>
+      <height>471</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -306,14 +267,76 @@
       </property>
      </widget>
     </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>400</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Wykonali:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>420</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Script</family>
+       <pointsize>12</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Wiktor Sasnal</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>440</y>
+       <width>161</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Script</family>
+       <pointsize>12</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Bartłomiej Rojek</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QFrame" name="Edycja">
     <property name="geometry">
      <rect>
-      <x>830</x>
-      <y>80</y>
+      <x>829</x>
+      <y>81</y>
       <width>241</width>
-      <height>401</height>
+      <height>471</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -553,12 +576,51 @@
       <string>Oznacz jako wykonane</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>410</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>obsługa plików:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>440</y>
+       <width>101</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>wczytaj zadania</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>440</y>
+       <width>81</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>zapisz zadania</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QFrame" name="Wyswietlanie">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>80</y>
+      <x>266</x>
+      <y>81</y>
       <width>561</width>
       <height>471</height>
      </rect>
@@ -574,12 +636,12 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>561</width>
+       <width>551</width>
        <height>471</height>
       </rect>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="doZrobienia">
       <attribute name="title">
@@ -590,8 +652,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>561</width>
-         <height>421</height>
+         <width>551</width>
+         <height>441</height>
         </rect>
        </property>
       </widget>
@@ -605,75 +667,13 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>561</width>
+         <width>551</width>
          <height>441</height>
         </rect>
        </property>
       </widget>
      </widget>
     </widget>
-   </widget>
-   <widget class="QLabel" name="label_10">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>480</y>
-      <width>141</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Wykonali:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_11">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>510</y>
-      <width>141</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe Script</family>
-      <pointsize>12</pointsize>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Wiktor Sasnal</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_12">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>530</y>
-      <width>161</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe Script</family>
-      <pointsize>12</pointsize>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Bartłomiej Rojek</string>
-    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
