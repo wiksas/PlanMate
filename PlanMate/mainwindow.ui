@@ -589,7 +589,7 @@
       <string>obsługa plików:</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="wczytaj">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -602,7 +602,7 @@
       <string>wczytaj zadania</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="zapisz">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -641,7 +641,7 @@
       </rect>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="doZrobienia">
       <attribute name="title">

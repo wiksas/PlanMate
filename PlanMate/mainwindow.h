@@ -31,6 +31,10 @@ private slots:
     void on_UsunEdycja_clicked();
     void odswiezModele();
 
+    void on_wczytaj_clicked();
+    void on_zapisz_clicked();
+
+
 private:
     Ui::MainWindow *ui;
     TaskManager* manager;
@@ -38,5 +42,6 @@ private:
     TaskModel* modelZrobione;
 
     void wyczyscPolaDodawania();
+    const QString dataFilePath = "zadania.json";
 };
 #endif // MAINWINDOW_H

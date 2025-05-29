@@ -18,6 +18,9 @@ public:
     const QVector<Task>& getTasks() const;
     int taskCount() const;
 
+    bool saveTasksToFile(const QString& filePath);
+    bool loadTasksFromFile(const QString& filePath);
+
 private:
     QVector<Task> m_tasks;
 };
