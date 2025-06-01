@@ -24,6 +24,17 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tableViewDoZrobienia->setModel(modelDoZrobienia);
     ui->tableViewZrobione->setModel(modelZrobione);
 
+    ui->tableViewDoZrobienia->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+    ui->tableViewDoZrobienia->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
+    ui->tableViewDoZrobienia->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
+    ui->tableViewDoZrobienia->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents);
+
+    ui->tableViewZrobione->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+    ui->tableViewZrobione->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
+    ui->tableViewZrobione->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
+    ui->tableViewZrobione->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents);
+
+
 
     ui->tableViewDoZrobienia->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableViewDoZrobienia->setSelectionMode(QAbstractItemView::SingleSelection);
